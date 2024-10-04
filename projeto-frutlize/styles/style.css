@@ -119,6 +119,7 @@ main section nav {
     font-family: var(--font-super);
     font-size: 4.5vw;
     text-align: center;
+    box-sizing: border-box;
 }
 
 main section nav a {

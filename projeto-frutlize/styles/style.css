@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "FreshFruit";
+    src: url('../fonts/Fresh\ Fruit.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SuperFruit";
+    src: url('../fonts/superfruit.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "AcidFruit";
+    src: url('../fonts/FRUIT\ ACID.otf') format('opentype');
+}
+
+:root {
+    --font-fresh: "FreshFruit", 'cursive', Arial, Helvetica, sans-serif;
+    --font-super: "SuperFruit", Arial, Helvetica, sans-serif;
+    --font-acid: "AcidFruit", Arial, Helvetica, sans-serif;
+
+    --cor01: #A8D73B;
+    --cor02: #FF6F20;
+    --cor03: #FFEA00;
+    --cor04: #E63946;
+    --cor05: #6A0572;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    background-color: rgb(216, 222, 226);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 40vw;
+    background: var(--cor02) url(../images/pixlr-image-generator-725320ca-da0b-4114-8d43-b65ef6fc4d54.png) center no-repeat fixed;
+    background-size: cover;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+header section h1 {
+    font-family: var(--font-fresh);
+    color: var(--cor02);
+    font-size: 5vw;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+header p {
+    font-family: var(--font-super);
+    font-size: 3.5vw;
+    display: inline-block;
+    box-sizing: border-box;
+
+    position: relative;
+    top: 5px;
+    left: 80vw;
+    transform: translate(-50%, -50%);
+}
+
+header p a {
+    text-decoration: none;
+    color: var(--cor01);
+    margin: 6px;
+    padding: 2px;
+}
+
+header p a:hover {
+    font-size: 4vw;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+    transition: .5s;
+}
+
+header nav {
+    font-family: var(--font-acid);
+    font-size: 3vw;
+    display: inline-block;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 35vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+header nav a {
+    color: var(--cor04);
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 6px;
+}
+
+header nav a:hover {
+    font-size: 3.2vw;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+    transition: .5s;
+}
+
+/* Fim da configuração do header */
+
+main {
+    
+}
+
+
+main section nav {
+    padding: 30px 0px;
+    font-family: var(--font-super);
+    font-size: 4.5vw;
+    text-align: center;
+}
+
+main section nav a {
+    padding: 4px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: var(--cor05);
+}
+
+

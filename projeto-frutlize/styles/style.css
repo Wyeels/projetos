@@ -114,7 +114,7 @@ main {
 }
 
 
-main section nav {
+main nav {
     padding: 30px 0px;
     font-family: var(--font-super);
     font-size: 4.5vw;
@@ -122,11 +122,19 @@ main section nav {
     box-sizing: border-box;
 }
 
-main section nav a {
+main nav a {
     padding: 4px;
     margin: 0px 10px;
     text-decoration: none;
     color: var(--cor05);
 }
 
+main nav a:hover {
+    font-size: 4.7vw;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
 
+article {
+    
+}

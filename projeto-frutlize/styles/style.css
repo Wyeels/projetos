@@ -192,3 +192,25 @@ main article p {
     font-size: 2vw;
     padding: 6px;
 }
+
+main aside {
+    margin: 10vw 2vw;
+}
+
+main aside .avimp {
+    max-width: 18vw;
+    padding: 3px;
+    margin: 0vw 2vw;
+    position: relative;
+    top: 2vw;
+    border-radius: 8px;
+}
+
+main aside .avsec {
+    max-width: 18vw;
+    padding: 3px;
+    margin: 5px;
+    position: relative;
+    top: -2vw;
+    border-radius: 8px;
+}

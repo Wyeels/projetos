@@ -90,14 +90,14 @@ header nav {
 
     position: absolute;
     top: 35vw;
-    left: 50vw;
+    left: 48vw;
     transform: translate(-50%, -50%);
 }
 
 header nav a {
     color: var(--cor04);
     text-decoration: none;
-    margin: 0px 10px;
+    margin: 0px 6px;
     padding: 6px;
 }
 

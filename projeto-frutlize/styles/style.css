@@ -214,3 +214,64 @@ main aside span img {
     margin: 0px;
     padding: 0px;
 }
+
+/* Fim da config do main */
+
+footer {
+    width: 100vw;
+    max-height: auto;
+    background: var(--cor02) url(../images/fundo-rodape.jpeg) center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+footer article {
+    max-width: 50vw;
+    margin: 6vw;
+    padding: 1vw;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+footer h2 {
+    color: var(--cor01);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+}
+
+footer div > p {
+    position: relative;
+    text-align: center;
+    margin-top: 10vw;
+    padding: 10px;
+    color: white;
+    background-color: rgba(95, 94, 94, 0.6);
+}
+
+footer img {
+    max-width: 8vw;
+    padding: 8px;
+    display: inline;
+    display: block;
+    margin: auto;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+    transition: .8s;
+}
+
+footer div > p a {
+    color: white;
+    text-decoration: none;
+}
+
+footer div > p a:hover {
+    text-decoration: dashed;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 1.5vw;
+    transition: .5s;
+}

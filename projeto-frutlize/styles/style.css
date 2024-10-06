@@ -194,23 +194,23 @@ main article p {
 }
 
 main aside {
-    margin: 10vw 2vw;
+    margin: 10vw 0vw;
 }
 
-main aside .avimp {
+main aside > article {
     max-width: 18vw;
-    padding: 3px;
-    margin: 0vw 2vw;
+    margin: 0vw 3vw;
     position: relative;
     top: 2vw;
     border-radius: 8px;
 }
 
-main aside .avsec {
-    max-width: 18vw;
-    padding: 3px;
-    margin: 5px;
-    position: relative;
+main aside .avimp {
     top: -2vw;
-    border-radius: 8px;
+}
+
+main aside span img {
+    text-shadow: 2px 2px 1px black;
+    margin: 0px;
+    padding: 0px;
 }

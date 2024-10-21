@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css" media="all">
 </head>
 <body>
-    <header>
-
-    </header>
     <main>
-        <h1>Login</h1>
-        <p>
-            Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente
-        </p>
+        <article>
+            <img src="imagens/fundo01.jpg" alt="imagem">
+        </article>
 
-        <form action="cadastro.php">
-            <div>
-                <label for="iusu">
-                    <i class="material-symbols-outlined">person</i>
-                </label>
-                <input type="email" name="usu" id="iusu" required placeholder="Seu email">
-            </div>
-            <div>
-                <label for="isen">
-                    <i class="material-symbols-outlined">vpn_key</i>
-                </label>
-                <input type="password" name="sen" id="isen" required minlength="8" placeholder="Sua senha">
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-                <input type="text" name="esq" id="iesq" placeholder="Esqueci a senha">
-            </div>
-        </form>
+        <section>
+            <h1>Login</h1>
+            <p>
+                Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente
+            </p>
+            <form action="cadastro.php">
+                <div class="back">
+                    <label for="iusu">
+                        <i class="material-symbols-outlined">person</i>
+                    </label>
+                    <input type="email" name="usu" id="iusu" required placeholder="Seu email">
+                </div>
+                <div class="back">
+                    <label for="isen">
+                        <i class="material-symbols-outlined">vpn_key</i>
+                    </label>
+                    <input type="password" name="sen" id="isen" required minlength="8" placeholder="Sua senha">
+                </div>
+                <div>
+                    <input type="submit" value="Entrar" id="isend">
+                    <input type="text" name="esq" id="iesq" placeholder="Esqueci a senha">
+                </div>
+            </form>
+        </section>
     </main>
 </body>
 </html>

@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
 body, html {
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
     background-color: #5D2C80;
 }
 
@@ -23,39 +22,39 @@ main {
     transform: translate(-50%, -50%);
 }
 
-article {
+main article {
     overflow: hidden;
     width: 100%;
     height: 25vh;
     border-radius: 12px 12px 0px 0px;
 }
 
-article img {
+main article img {
     width: 100%;
     height: 100%;
 }
 
-section h1 {
+main section h1 {
     text-align: center;
 }
 
-section p {
+main section p {
     padding: 6px;
 }
 
-section form i {
+main section form i {
     color: white;
     padding: 4px;
 }
 
-section form div.back {
+main section form div.back {
     height: 30px;
     background-color: #5A2D7E;
     margin: 5px 3px;
     border-radius: 6px;
 }
 
-section form input#isen, input#iusu {
+main section form input#isen, input#iusu {
     width: 82%;
     height: 24px;
     position: absolute;
@@ -64,19 +63,27 @@ section form input#isen, input#iusu {
     border-radius: 8px;
 }
 
-section form input#isend, input#iesq {
+main section form input#isend, a#iesq {
     width: 90%;
+    height: 30px;
     display: block;
     margin: auto;
     margin-bottom: 4px;
-    padding: 4px;
     background-color: #66B1AB;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid black;
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    text-align: center;
 }
 
-section form input#isend:hover {
-    background-color: #377a76;
+main section form a#iesq {
+    background-color: white;
+    color: #2db8ae;
+}
+
+main section form input#isend:hover, a#iesq:hover {
+    background-color: #2b6460;
 }

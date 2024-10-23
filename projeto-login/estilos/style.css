@@ -23,15 +23,12 @@ main {
 }
 
 main article {
-    overflow: hidden;
     width: 100%;
     height: 25vh;
+    background: white url(../imagens/fundo01.jpg) center center no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
     border-radius: 12px 12px 0px 0px;
-}
-
-main article img {
-    width: 100%;
-    height: 100%;
 }
 
 main section h1 {
@@ -39,6 +36,7 @@ main section h1 {
 }
 
 main section p {
+    font-size: .8em;
     padding: 6px;
 }
 
@@ -48,16 +46,18 @@ main section form i {
 }
 
 main section form div.back {
-    height: 30px;
+    height: 40px;
     background-color: #5A2D7E;
     margin: 5px 3px;
     border-radius: 6px;
 }
 
 main section form input#isen, input#iusu {
-    width: 82%;
-    height: 24px;
+    width: 81%;
+    height: 30px;
     position: absolute;
+    margin: 3px;
+    border: none;
 
     background-color: #93CECC;
     border-radius: 8px;
@@ -65,7 +65,7 @@ main section form input#isen, input#iusu {
 
 main section form input#isend, a#iesq {
     width: 90%;
-    height: 30px;
+    height: 35px;
     display: block;
     margin: auto;
     margin-bottom: 4px;
@@ -73,7 +73,7 @@ main section form input#isend, a#iesq {
     font-size: 1em;
     text-decoration: none;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #66B1AB;
     color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 8px;

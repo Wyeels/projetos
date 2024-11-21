@@ -17,3 +17,46 @@
     --cor04: #F7D76C;
     --cor05: #F89D41;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 
+::-webkit-scrollbar {
+    display: none;
+} 
+*/
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor02);
+}
+
+header {
+    width: 100vw;
+    height: 300px;
+    background: white url(../imagens/ft06.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+header > section > h1 {
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    font-family: var(--fontplayfair);
+    font-size: 2em;
+    background-image: linear-gradient(to right, var(--cor04), var(--cor05));
+    background-clip: text;
+    color: transparent;
+    padding: 8px;
+}
+
+header > section > p {
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    font-family: var(--fontplayfair);
+    font-size: .8em;
+    color: var(--cor03);
+}

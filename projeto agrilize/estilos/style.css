@@ -76,13 +76,13 @@ header > section > div#imenu {
     box-sizing: border-box;
     top: 35px;
     left: 0px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(128, 128, 128, 0.2);
     border-radius: 6px;
 }
 
 header > section > div#imenu > a {
     display: block;
-    margin: 8px;
+    margin: 10px;
     text-decoration: none;
     color: var(--cor01);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);

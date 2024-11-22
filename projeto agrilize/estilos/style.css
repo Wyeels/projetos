@@ -38,6 +38,10 @@ body, html {
 header {
     width: 100vw;
     height: 300px;
+}
+
+header > section {
+    height: 100%;
     background: white url(../imagens/ft06.jpg) center center no-repeat;
     background-size: cover;
 }

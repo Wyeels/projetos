@@ -89,7 +89,7 @@ header > section > div {
 
 header > section > div#imenu {
     display: none;
-    box-sizing: border-box;
+    box-sizing: content-box;
     top: 35px;
     left: 0px;
     background-color: rgba(128, 128, 128, 0.2);
@@ -99,6 +99,7 @@ header > section > div#imenu {
 header > section > div#imenu > a {
     display: block;
     margin: 10px;
+    box-sizing: border-box;
     text-decoration: none;
     color: var(--cor01);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);

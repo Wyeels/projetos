@@ -70,9 +70,9 @@ header > section > a {
 
 header > section > a > span:hover {
     text-shadow: 0px 0px 5px #E0E0E0;
+
     transform: scale(1.3);
-    transition: text-shadow .5s, transform .5s;
-    transition-timing-function: ease;
+    transition: text-shadow, transform .5s ease;
 }
 
 header > section > div {
@@ -100,4 +100,10 @@ header > section > div#imenu > a {
     text-decoration: none;
     color: var(--cor01);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+header > section > div#ibotao:hover {
+    opacity: 65%;
+    transform: scale(1.2);
+    transition: opacity, transform .5s ease;
 }

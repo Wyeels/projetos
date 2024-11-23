@@ -67,6 +67,7 @@ header > section > a {
     position: relative;
 
     left: 82%;
+    top: -53px
 }
 
 header > section > a > span:hover {

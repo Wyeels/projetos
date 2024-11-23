@@ -66,8 +66,8 @@ header > section > a {
     box-sizing: border-box;
     position: relative;
 
-    left: 80%;
-    top: -53px
+    left: 42%;
+    top: 180px;
 }
 
 header > section > a > span:hover {

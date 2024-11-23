@@ -99,7 +99,6 @@ header > section > div#imenu {
 header > section > div#imenu > a {
     display: block;
     margin: 10px;
-    box-sizing: border-box;
     text-decoration: none;
     color: var(--cor01);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);

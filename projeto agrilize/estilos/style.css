@@ -110,6 +110,38 @@ header > section > div#ibotao:hover {
     transition: opacity, transform .5s ease;
 }
 
-main {
-    
+main > section {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+main > section > h2 {
+    margin: 20px;
+    text-align: center;
+    font-family: var(--fontplayfair);
+    color: var(--cor03);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+main > section > article {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+}
+
+main > section > article > p {
+    text-align: center;
+    font-family: var(--fontraleway);
+    color: var(--cor04);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+main > section > article > div {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main > section > article > div > img {
+    width: 100%;
+    height: 100%;
 }

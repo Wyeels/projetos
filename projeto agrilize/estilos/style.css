@@ -124,8 +124,8 @@ main > section > h2 {
 }
 
 main > section > article {
-    max-width: 400px;
-    max-height: 500px;
+    max-width: 65vw;
+    max-height: 48vh;
     margin: auto;
 }
 

@@ -110,12 +110,10 @@ header > section > div#ibotao:hover {
     transition: opacity, transform .5s ease;
 }
 
-/* 
 main > section {
     padding: 10px;
     margin-bottom: 30px;
 } 
-*/
 
 main > section > h2 {
     margin: 20px;

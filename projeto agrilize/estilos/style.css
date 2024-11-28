@@ -147,6 +147,7 @@ main > section > article > p {
 
 main > section > article > p > strong {
     width: 140px;
+    height: 60px;
     display: block;
     margin-top: 50px;
     padding: 6px;

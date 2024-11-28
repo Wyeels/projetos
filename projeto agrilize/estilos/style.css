@@ -160,7 +160,7 @@ main > section > article > p > strong {
 }
 
 main > section > article > p > strong > span {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 main > section > article > p > strong > span:hover {

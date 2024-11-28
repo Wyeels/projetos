@@ -126,9 +126,12 @@ main > section > h2 {
 main > section > article {
     max-width: 170px;
     height: 360px;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     display: inline-block;
+
+    position: relative;
+    left: 5%;
 }
 
 main > section > article > p {

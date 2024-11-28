@@ -124,7 +124,7 @@ main > section > h2 {
 }
 
 main > section > article {
-    max-width: 150px;
+    max-width: 30vw;
     height: 360px;
     padding: 5px;
     margin: 5px;

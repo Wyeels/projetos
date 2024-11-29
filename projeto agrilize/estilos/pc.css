@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+header {
+    height: 400px;
+    background: url('../imagens/backgroundpc.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+main > section > article {
+    width: 200px;
+    height: 380px;
+
+    left: calc(50% - 48vw);
+    transition: width .6s ease;
+}
+
+main > section > article > p {
+    width: 200px;
+    font-size: 1em;
+}
+
+main > section > article > p > strong {
+    width: 180px;
+    height: 60px;
+}
+
+main > section > aside > article > div, main > section > aside > article > div > img {
+    width: 80px;
+    margin-left: 15%;
+
+    left: calc(50%-50%);
+}

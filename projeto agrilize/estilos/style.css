@@ -116,6 +116,11 @@ header > section > div#ibotao:hover {
 main > section {
     padding: 10px;
     margin-bottom: 30px;
+
+    position: relative;
+    
+    left: 50%;
+    transform: translate(-50%);
 } 
 
 main > section > h2 {
@@ -134,7 +139,7 @@ main > section > article {
     display: inline-block;
 
     position: relative;
-    left: 5%;
+    left: 8%;
 }
 
 main > section > article > p {
@@ -199,11 +204,12 @@ main > section > aside > article > a {
 }
 
 main > section > aside > article > div, main > section > aside > article > div > img {
-    width: 50px;
+    width: 60px;
     display: inline-block;
     border-radius: 8px;
     padding: 10px;
     margin-left: 20%;
+    columns: 2;
 }
 
 /* Fim da config do main */

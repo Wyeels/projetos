@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+main > section > article {
+    width: 30vw;
+    height: 380px;
+
+    left: 15%;
+    transition: width .6s ease;
+}
+
+main > section > article > p {
+    width: 25vw;
+    font-size: .95em;
+}
+
+main > section > article > p > strong {
+    width: 23vw;
+    height: 60px;
+}
+
+main > section > aside > article > div, main > section > aside > article > div > img {
+    width: 80px;
+
+    left: calc(50%-50%);
+}

@@ -31,6 +31,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     background-color: var(--cor02);
+    scroll-behavior: smooth;
 }
 
 header {
@@ -109,6 +110,8 @@ header > section > div#ibotao:hover {
     transform: scale(1.2);
     transition: opacity, transform .5s ease;
 }
+
+/* Fim da config do header */
 
 main > section {
     padding: 10px;
@@ -202,6 +205,8 @@ main > section > aside > article > div, main > section > aside > article > div >
     padding: 10px;
     margin-left: 20%;
 }
+
+/* Fim da config do main */
 
 footer { 
     background-color: rgba(128, 128, 128, 0.3);

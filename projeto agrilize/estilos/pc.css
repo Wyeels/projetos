@@ -6,6 +6,29 @@ header {
     background-size: cover;
 }
 
+header > section > div {
+    display: none;
+}
+
+header > section > div#imenu {
+    display: block;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.4);
+
+    top: 40%;
+    left: 50%;
+
+    transform: translate(-50%, -40%);
+    }
+
+header > section > div#imenu > a {
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+        color: var(--cor01);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
 main > section > article {
     width: 200px;
     height: 380px;

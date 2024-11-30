@@ -92,7 +92,7 @@ header > section > div#imenu {
     box-sizing: content-box;
     top: 35px;
     left: 0px;
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(128, 128, 128, 0.5);
     border-radius: 6px;
 }
 
@@ -148,7 +148,7 @@ main > section > article > p {
     text-align: center;
     font-family: var(--fontraleway);
     color: var(--cor04);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
 
     position: absolute;
 }

@@ -15,6 +15,14 @@ header > section > div {
     display: none;
 }
 
+header > section > article {
+    height: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 header > section > div#imenu {
     display: block;
     position: absolute;

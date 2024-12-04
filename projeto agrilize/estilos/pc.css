@@ -16,25 +16,20 @@ header > section > div {
 }
 
 header > section > article {
-    height: 300px;
+    height: 260px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-end;
 }
 
-header > section > div#imenu {
+header > section > article > div#imenu {
     display: block;
-    position: absolute;
+    position: relative;
     background-color: rgba(128, 128, 128, 0.4);
-
-    top: 40%;
-    left: 50%;
-
-    transform: translate(-50%, -40%);
     }
 
-header > section > div#imenu > a {
+header > section > article > div#imenu > a {
         display: inline-block;
         margin: 10px;
         text-decoration: none;

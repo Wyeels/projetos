@@ -78,7 +78,7 @@ header > section > a > span:hover {
     transition: text-shadow, transform .5s ease;
 }
 
-header > section > div {
+header > section > div, header > section > article > div {
     color: var(--cor04);
     padding: 5px;
     position: absolute;
@@ -87,7 +87,7 @@ header > section > div {
     left: 5px;
 }
 
-header > section > div#imenu {
+header > section > article > div#imenu {
     display: none;
     box-sizing: content-box;
     top: 35px;
@@ -96,7 +96,7 @@ header > section > div#imenu {
     border-radius: 6px;
 }
 
-header > section > div#imenu > a {
+header > section > article > div#imenu > a {
     display: block;
     margin: 10px;
     text-decoration: none;

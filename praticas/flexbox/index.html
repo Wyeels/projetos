@@ -16,19 +16,39 @@
             background-size: cover;
         }
 
-        header section div#menu {
+        header section div#imenu {
             height: 200px;
             display: flex;
             flex-flow: row nowrap;
             background-color: transparent;
             justify-content: center;
-            align-items: flex-end;
+            align-items: flex-start;
         }
 
         header p {
             padding: 8px;
-            background-color: aqua;
-            border: 1px solid black;
+            margin: 3px;
+            background-color: rgba(224, 255, 255, 0.5);
+            border-radius: 6px;
+            align-self: flex-end;
+            flex-basis: 200px;
+        }
+
+        header div#imenu p:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: transform .5s ease;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        main h1, h2 {
+            background-image: linear-gradient(to right, lightblue, lightgreen);
+            color: transparent;
+            background-clip: text;
+            text-align: center;
         }
     </style>
 </head>
@@ -39,7 +59,7 @@
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quisquam ducimus perferendis obcaecati iure corrupti amet consequatur in delectus aut deserunt est, facere numquam illum. Totam est id fuga modi.</p>
             </div>
-            <div id="menu">
+            <div id="imenu">
                 <p>menu01</p>
                 <p>menu02</p>
                 <p>menu03</p>

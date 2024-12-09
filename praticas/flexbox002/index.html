@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@48,400,1" rel="stylesheet"/>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: aliceblue url("painting-mountain-lake-with-mountain-background.jpg") center no-repeat scroll;
+            background-size: cover;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header > section {
+            height: 500px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content:center;
+            align-items: center;
+        }
+
+        header > section > h1 {
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            align-self: flex-start;
+        }
+
+        header > section > p {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            flex-basis: 200px;
+            flex-grow: 0;
+        }
+
+        header > section > span {
+            color: white;
+            align-self: flex-start;margin-left: auto;
+            cursor: pointer;
+        }
+
+        header > section > nav {
+            display: none;
+            align-self: flex-start;
+            margin-left: auto;
+        }
+
+        header > section > nav > a {
+            width: 100px;
+            display: block;
+            padding: 10px;
+            margin: 4px;
+            font-family: cursive;
+            text-decoration: none;
+            color: white;
+            border-radius: 6px;
+            background-color: rgba(135, 206, 250, 0.5);
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        header > section > nav > a:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+            transition: transform .5s, box-shadow .8s ease;
+        }
+
+        /* fim das confi header */
+
+        main > section {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        main > section > article {
+           flex-basis: 800px;
+           flex-grow: 0;
+           flex-shrink: 1;
+        }
+
+        main > section > article > h1, main > section > article > h2 {
+            text-align: center;
+            padding: 20px;
+        } 
+
+        main > section > article > p {
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Exemplo de Título</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet repellendus ipsa ex, voluptatum hic sunt possimus quod. Cumque, reprehenderit et quidem distinctio nulla facere similique veniam illo iste voluptate laborum.</p>
+            <span class="material-symbols-outlined" onclick="abrirMenu()">menu</span>
+            <nav id="imenu">
+                <a href="#">menu01</a>
+                <a href="#">menu02</a>
+                <a href="#">menu03</a>
+                <a href="#">menu04</a>
+                <a href="#">menu05</a>
+                <a href="#">menu06</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h1>Exemplo de Primeiro</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse saepe totam neque architecto amet, officia quasi assumenda sapiente dolores, error deleniti vitae est repellendus necessitatibus consequuntur libero quibusdam laboriosam eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis repudiandae at magnam saepe recusandae repellat fugiat, dolore tempore corporis ducimus necessitatibus nostrum! Explicabo facere necessitatibus atque quia expedita, mollitia eveniet!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, sint deleniti? Quidem adipisci sit quibusdam ea tempore, aspernatur eligendi quas, odio fugit facilis obcaecati sunt non placeat. Harum, in quasi!</p>
+                <h2>Exemplo de Segundo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati odit adipisci distinctio? Quidem quam necessitatibus ullam rerum, qui aliquam cupiditate quisquam, aperiam saepe doloremque incidunt dolores porro obcaecati nulla reprehenderit.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quis tempore dolorum consequatur nostrum possimus ea doloremque iure facere est ipsum laborum, et minus quam dignissimos aliquam, in similique. Expedita. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ad, minima laborum vel recusandae aliquid illo rem a voluptas impedit nisi facere iusto numquam distinctio doloremque itaque atque quod maiores.</p>
+                <h2>Exemplo de terceiro</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aperiam molestiae quod, architecto voluptatem tenetur accusamus libero optio magnam, porro ratione suscipit. Architecto laboriosam fugit, a molestiae amet eligendi sunt.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h2>Final</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maiores consequatur porro tenetur rerum magni fugiat velit, quia amet nesciunt nam doloribus excepturi perferendis quam ipsum eaque, quae cupiditate. Odio.</p>
+        </section>
+        <section>
+            <div>
+                <p>menu-1</p>
+                <p>menu-2</p>
+                <p>menu-3</p>
+                <p>menu-4</p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        function abrirMenu() {
+            if (imenu.style.display == 'none') {imenu.style.display = "block"} else {imenu.style.display = 'none'}
+        }
+    </script>
+</body>
+</html>

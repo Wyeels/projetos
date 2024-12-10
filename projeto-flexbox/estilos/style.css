@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header > section {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: gray;
+}
+
+header > section > h1 {
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+header > section > nav {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header > section > nav > a {
+    width: 90%;
+    padding: 10px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+header > section > nav > a:hover {
+    background-color: white;
+    color: black;
+    transition: all .5s ease;
+}
+
+/* Fim das config header */
+
+main {
+    padding: 8px;
+}
+
+main > section {
+    width: 95%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+}

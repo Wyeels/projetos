@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+header > section {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header > section > h1 {
+    flex: 0 1 300px;
+}
+
+header > section > nav {
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    flex: 0 0 650px;
+    padding: 8px;
+}

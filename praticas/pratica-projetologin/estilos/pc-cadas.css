@@ -10,7 +10,7 @@ main section {
 
 main > section#iimg {
     display: block;
-    background: var(--cor-fundo) url(../imagens/imagem-de-fundo.jpg) center no-repeat scroll;
+    background: var(--cor-fundo) url(../imagens/imagem-de-fundo-cadastro.jpg) center no-repeat scroll;
     background-size: cover;
     border-radius: 8px 0px 0px 8px;
 }

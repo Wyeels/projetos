@@ -85,6 +85,8 @@ main > section > form > div{
 
 main > section > form > div > input[type = email], main > section > form > div > input[type = password] {
     flex: 1 1 200px;
+    height: 38px;
+    margin-right: 6px;
     padding: 5px;
     border-radius: 6px;
     border: none;
@@ -117,4 +119,9 @@ main > section > form > div > input[type = submit]:hover {
 
 main > section > p > a {
     text-decoration: none;
+    color: var(--cor-destaqueselinks);
+}
+
+main > section > p > a:hover {
+    color: var(--cor-botao);
 }

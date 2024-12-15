@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Escuro</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            /* display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start; */
+            background-color: lightblue;
+        }
+
+        main div {
+            width: 60px;
+            height: 20px;
+            background-color: lightcoral;
+            text-align: left;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: inset 0px 0px 5px black;
+
+            transition: all 1s ease;
+        }
+        main div p {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main id="ifundo">
+        <div>
+            <p id="ibotao" onclick="mudarCor()">
+            
+            </p>
+        </div>
+    </main>
+
+    <script>
+        function mudarCor() {
+            var ifundo = document.getElementById('ifundo')
+            var ibotao = document.getElementById('ibotao')
+            
+            if (ibotao.style.marginLeft == 'auto') {ibotao.style.marginLeft = '0px'} else {ibotao.style.marginLeft = 'auto'} 
+            
+            ibotao.style.transition = "all 10s ease";
+
+            if (ifundo.style.backgroundColor == 'lightgray') {ifundo.style.backgroundColor = 'lightblue'} else {ifundo.style.backgroundColor = 'lightgray'}
+
+            ifundo.style.transition = "background-color 1s ease";
+        }
+    </script>
+</body>
+</html>

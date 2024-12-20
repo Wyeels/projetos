@@ -18,7 +18,8 @@
             flex-flow: row nowrap;
             justify-content: flex-start;
             align-items: flex-start; */
-            background-color: lightblue;
+            background-color: black;
+            overflow: hidden;
         }
 
         main div {
@@ -33,10 +34,41 @@
             cursor: pointer;
             border-radius: 20px;
             box-shadow: inset 0px 0px 5px black;
-            transition: margin-left 1s ease;
 
             transition: all 1s ease;
         }
+
+        main div#istar {
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px black;
+            background-color: transparent;
+            overflow: hidden;
+            position: relative;
+            left: 72%;
+            top: -40px;
+
+            background-image: url('imagens/lua.png');
+            background-size: cover;
+        }
+
+        main div#estrela {
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px white;
+            overflow: hidden;
+            position: relative;
+            left: 72%;
+            top: -450px;
+
+            background-image: url('imagens/sol.png');
+            background-size: cover;
+        }
+
         main div p {
             width: 15px;
             height: 15px;
@@ -53,20 +85,36 @@
             
             </p>
         </div>
+        <div id="istar">
+
+        </div>
+        <div id="estrela">
+
+        </div>
     </main>
 
     <script>
         function mudarCor() {
             var ifundo = document.getElementById('ifundo')
             var ibotao = document.getElementById('ibotao')
+            var istar = document.getElementById('istar')
+            var estrela = document.getElementById('estrela')
             
-            if (ibotao.style.marginLeft == 'auto') {ibotao.style.marginLeft = '0px'} else {ibotao.style.marginLeft = 'auto'} 
+            if (ibotao.style.transform == 'translateX(34px)') {ibotao.style.transform = 'translateX(0px)'} else {ibotao.style.transform = 'translateX(34px)'} 
             
             ibotao.style.transition = "all 1s ease";
 
-            if (ifundo.style.backgroundColor == 'lightgray') {ifundo.style.backgroundColor = 'lightblue'} else {ifundo.style.backgroundColor = 'lightgray'}
+            if (ifundo.style.backgroundColor == 'white') {ifundo.style.backgroundColor = 'black'} else {ifundo.style.backgroundColor = 'white'}
 
-            ifundo.style.transition = "background-color 1s ease";
+            ifundo.style.transition = "all 3s ease";
+
+            if (istar.style.transform == 'translateX(300px)') {istar.style.transform = 'translateX(0px)'} else {istar.style.transform = 'translateX(300px)'} 
+
+            istar.style.transition = 'all 3s ease'
+
+            if (estrela.style.top == '-240px') {estrela.style.top = '-450px'} else {estrela.style.top = '-240px'}
+
+            estrela.style.transition = 'all 3s ease'
         }
     </script>
 </body>

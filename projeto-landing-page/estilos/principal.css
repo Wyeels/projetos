@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+
+:root {
+    --cor-fundo: #E9DFD5;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+header {
+    width: 100vw;
+    height: 40vh;
+    background: transparent url('../imagens/pitaya.png') center no-repeat scroll;
+    background-size: cover;
+}

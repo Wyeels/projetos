@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="estilos/grande.css" media="screen and (min-width: 921px) and (max-width: 1200px)">
     <link rel="stylesheet" href="estilos/extra-grande.css" media="screen and (min-width: 1201px)">
 </head>
-<body>
+<body onresize="tamanho()">
     <header>
         <h1>FruitEX</h1>
         <p>Tudo sobre as melhores frutas do mercado, disponíveis no site oficial da FrutLize!</p>
+        <div>
+            <img src="imagens/menu-fechado.png" alt="Menu">
+            <menu>
+                <a href="#pitaya">Pitaya</a>
+                <a href="#banana">Banana</a>
+                <a href="#morango">Morango</a>
+                <a href="#maca">Maçã</a>
+            </menu>
+        </div>
     </header>
     <main>
         <section>
@@ -43,7 +52,14 @@
         </section>
     </main>
     <footer>
-
+        <div>
+            <p>
+                Criado por <a href="https://github.com/wyeels" target="_blank">Wesley Oliveira Xavier</a>
+            </p>
+            <p>
+                <a href="#">Créditos</a>
+            </p>
+        </div>
     </footer>
 
     <script src="codigos.js">

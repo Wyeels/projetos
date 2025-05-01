@@ -7,22 +7,31 @@
     font-family: "FruitFresh";
     src: url('../fonts/Fresh\ Fruit.ttf ACID.otf');
 }
+@font-face {
+    font-family: "SuperFruit";
+    src: url('../fonts/superfruit.ttf');
+}
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    transition: all 1s ease;
+    transition: all .5s ease;
     scroll-behavior: smooth;
 }
 
 :root {
+    --font-fresh: 'FruitFresh', Arial, Helvetica, sans-serif;
+    --font-acid: 'FruitAcid', cursive, serif;
+    --font-super: 'SuperFruit', 'Courier New', Courier, monospace;
+
     --cor-fundo: #E9DFD5;
 }
 
 body {
     background-color: var(--cor-fundo);
-    font-family: 'FruitFresh';
+    color: rgba(0, 0, 0, 0.7);
+    font-family: var(--font-acid);
     font-size: 1.1em;
 }
 
@@ -35,7 +44,7 @@ header > h1 {
     background: transparent url("../imagens/imagem-texto.jpg") center no-repeat scroll;
     background-size: cover;
     background-clip: text;
-    font-family: "FruitAcid";
+    /* font-family: var(--font-acid); */
     color: transparent;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     padding: 8px;
@@ -57,7 +66,7 @@ header > div {
 header > div > menu {
     height: 100%;
     display: none;
-    font-family: "FruitAcid";
+    /* font-family: var(--font-acid); */
     padding: 4px;
 }
 
@@ -123,9 +132,19 @@ main > section > article#maca {
 }
 
 footer {
-    height: 80px;
+    height: 70px;
     padding: 6px;
+    margin-top: 4px;
     text-align: center;
-    font-family: "FruitAcid";
+    /* font-family: var(--font-acid); */
     background-color: #e4d4c5;
+}
+
+footer > div > p > a {    
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+footer > div > p > a:hover {
+    color: rgba(0, 0, 0, 0.9);
 }

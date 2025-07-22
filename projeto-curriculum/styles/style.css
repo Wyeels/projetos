@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+:root {
+    --font-color1: #EDEBDC;
+    --font-color2: #EFE5CC;
+    --font-color3: #AAB0B0;
+    --font-color4: #686D81;
+    --font-color5: #071C49;
+
+    --font-title: Arial, sans-serif, Helvetica;
+    --font-text: 'Courier New', Courier, monospace;
+    --font-list: 'Times New Roman', Times, serif, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--font-color2);
+}
+
+header {
+    background-color: var(--font-color1);
+}
+
+header > section > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+header > section > div#primeira {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+header > section > div > img {
+    width: 300px;
+    border-radius: 15%;
+}
+
+header > section > div > p > img, header > section > div > p > a > img {
+    width: 40px;
+}
+
+header > section > div > p > a > img:hover {
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+

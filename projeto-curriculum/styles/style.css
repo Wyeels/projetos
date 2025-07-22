@@ -16,14 +16,45 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: var(--font-text);
 }
 
 html, body {
     background-color: var(--font-color2);
 }
 
+/* Config Pontual */
+
+h2 {
+    padding-top: 18px;
+    color: #071C49;
+}
+
+p {
+    font-size: 1.03em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color4);
+}
+
+a:hover {
+    color: var(--font-color5);
+    transition: all .5s ease;
+}
+
+/* Config Header */
+
 header {
+    max-width: 800px;
+    margin: auto;
     background-color: var(--font-color1);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 header > section > div {
@@ -42,15 +73,38 @@ header > section > div#primeira {
 
 header > section > div > img {
     width: 300px;
-    border-radius: 15%;
+    border-radius: 10%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 header > section > div > p > img, header > section > div > p > a > img {
     width: 40px;
+    /* border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); */
 }
 
 header > section > div > p > a > img:hover {
     transform: scale(1.2);
     transition: all 1s ease;
 }
+
+/* Config Main */
+
+main {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: var(--font-color1);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    text-indent: 10px;
+    line-height: 1.4em;
+}
+
+main > section > ul > li {
+    list-style-type: none;
+}
+
+
 

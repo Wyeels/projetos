@@ -34,7 +34,7 @@ p {
     font-size: 1.03em;
 }
 
-a {
+a, header p{
     text-decoration: none;
     color: var(--font-color4);
 }

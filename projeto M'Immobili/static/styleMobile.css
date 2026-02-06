@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Cores gerais de Página */
+    --corPaginaEscuro: #B0B0B0;
+    --corPaginaClaro: #EEE;
+    /* Cor para os Itens */
+    --corItensClaro: #363636;
+    --corItensEscuro: #0E0E0E;
+    --corItensPreto: #040304;
+    /* Fontes */
+    --fontePrincipal: "Montserrat";
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--corPaginaClaro);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Configurações Header */
+
+header {
+    width: 100vh;
+    height: 300px;
+    background: url("imagemFundo.png") center cover no-repeat fixed transparent;
+    box-shadow: 0px 0px 8px #000000D4;
+    border-radius: 0px 0px 8px 8px;
+    margin-bottom: 10px;
+}
+
+header > section {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: left;
+}
+
+/* Configurações Main */
+
+main > section {
+    display: grid;
+    place-content: center center;
+    place-items: center center;
+    gap: 180px;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%; 
+}
+
+.slider-track {
+    display: flex;
+    gap: 80px;
+}
+
+.item {
+    gap: 0px;
+    flex-shrink: 0; 
+    width: 250px;   
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(45deg, #040304, #363636,  #0E0E0E);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #00000073;
+}
+
+.caixa {
+    width: 90%;
+    height: 65%;
+    border-radius: 8px;
+    background-color: blue;
+}
+
+.texto {
+    width: 50%;
+    height: 20%;
+    border-radius: 8px;
+    background-color: gray;
+}
+
+/* Configurações Footer */
+
+footer {
+
+}

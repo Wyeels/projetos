@@ -1,11 +1,33 @@
-// Seleciona todos os containers de vitrine
+
+const botoes = Array.from(document.getElementsByClassName('botoes'));
+
+const acoes = {
+  abrirMenu: () => 
+    document.body.style.ad
+  ,
+  verCarrinho: () => console.log("Mostrando itens do carrinho..."),
+  fazerLogin: () => console.log("Indo para tela de login..."),
+  abrirSuporte: () => console.log("Iniciando suporte...")
+};
+
+botoes.forEach(botao => {
+  botao.addEventListener('click', (e) => {
+    const nomeDaAcao = e.currentTarget.dataset.acao;
+
+    if (acoes[nomeDaAcao]) {
+      acoes[nomeDaAcao]();
+    }
+  });
+});
+
+
+
 const todasAsVitrines = document.querySelectorAll('.slider-container');
 
 todasAsVitrines.forEach((container) => {
   const track = container.querySelector('.slider-track');
   const itens = track.querySelectorAll('.item');
-  
-  // Se não houver itens, ignora esta vitrine
+
   if (itens.length === 0) return;
 
   function moverVitrine() {
@@ -21,10 +43,11 @@ todasAsVitrines.forEach((container) => {
     }, 800);
   }
 
-  // Define o intervalo individual para cada vitrine
   let intervalo = setInterval(moverVitrine, 3000);
 
-  // Pausa ao passar o mouse (opcional, mas recomendado)
   container.addEventListener('mouseenter', () => clearInterval(intervalo));
   container.addEventListener('mouseleave', () => intervalo = setInterval(moverVitrine, 3000));
 });
+
+
+

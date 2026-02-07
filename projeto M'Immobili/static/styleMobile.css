@@ -34,7 +34,8 @@ body::-webkit-scrollbar {
 header {
     width: 100vh;
     height: 300px;
-    background: url("imagemFundo.png") center cover no-repeat fixed transparent;
+    background: url("../static/imagem\ de\ fundo.png") center no-repeat scroll transparent;
+    background-size: cover;
     box-shadow: 0px 0px 8px #000000D4;
     border-radius: 0px 0px 8px 8px;
     margin-bottom: 10px;
@@ -43,9 +44,20 @@ header {
 
 header > section {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr;
+    background-color: transparent;
+    grid-template-columns: 2fr 8fr 1.2fr 1fr;
     grid-template-rows: auto;
     align-items: left;
+    padding: 5px;
+}
+
+header article, header div {
+    background-color: transparent;
+}
+
+header > section > article > div > img {
+    width: 40px;
+    background-color: transparent;
 }
 
 header > section > article > div > article {
@@ -66,9 +78,15 @@ header > section > article > div > article > h2 > a:hover {
     transition: all 1s ease;
 }
 
-header > section > article > div > article > p {
+header > section > article > div > p {
+    padding: 8px;
     font-size: .8em;
     font-weight: 400;
+    background-color: transparent;
+}
+
+.botoes {
+    width: 40px;
     background-color: transparent;
 }
 
@@ -81,24 +99,40 @@ header > section > article > div > article > p {
 .menuAberto {
     width: 35dvw;
     height: 100dvh;
-    position: absolute;
-    top: -1px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
     z-index: 2;
+    transition: left 0.5s ease;
     background-image: linear-gradient(150deg, var(--corPaginaEscuro) 15%, var(--corPaginaClaro) 30%);
-    border-radius: 0px 0px 18px 18px;
+    border-radius: 0px 18px 18px 0px;
     box-shadow: 0px 0px 6px black;
 }
 
 #menu {
-    margin-left: 65%;
+    width: 40px;
+    margin-left: 75%;
+    margin-top: 5%;
+    background-color: transparent;
+}
+
+.navegacao {
+    display: grid;
+    padding: 5px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr 4fr;
+    place-items: center left;
 }
 
 .imagensInterface {
+    width: 30px;
+    margin-top: 2px;
+    background-color: transparent;
     display: inline-block;
 }
 
 .meioMenu {
-    margin-top: 42%;
+    margin-top: 15%;
     background-color: transparent;
 }
 
@@ -130,7 +164,9 @@ header > section > article > div > article > p {
 }
 
 .logoMenu {
+    width: 40px;
     position: relative;
+    background-color: transparent;
     top: 10px;
     left: 40%;
 }
@@ -141,7 +177,7 @@ header > section > article > div > article > p {
     gap: 10px;
     grid-template: repeat(3, auto) / repeat(2, 50%);
     font-size: .7em;
-    margin-top: 42%;
+    margin-top: 18%;
     background-color: transparent;
 }
 
@@ -154,6 +190,7 @@ header > section > article > div > article > p {
 
 .imagemConta {
     width: 50px;
+    background-color: transparent;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -169,6 +206,7 @@ header > section > article > div > article > p {
 
 .imagemProdutos {
     width: 50px;
+    background-color: transparent;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -184,21 +222,11 @@ header > section > article > div > article > p {
 
 .imagemAtendimento {
     width: 50px;
+    background-color: transparent;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 3;
-}
-
-aside > .botoes {
-    width: 80px;
-    position: fixed;
-    top: 85%;
-    left: 85%;
-    z-index: 2;
-    background-color: var(--corPaginaEscuro);
-    border-radius: 8px;
-    padding: 10px;
 }
 
 /* Configurações Main */
@@ -277,6 +305,16 @@ main > section > article > h2 > a:hover {
     height: 20%;
     border-radius: 8px;
     background-color: gray;
+}
+
+aside > .botoes {
+    width: 60px;
+    position: fixed;
+    top: 87%;
+    left: 87%;
+    z-index: 2;
+    background-color: var(--corPaginaClaro);
+    border-radius: 12px;
 }
 
 /* Configurações Footer */

@@ -2,8 +2,13 @@
 const botoes = Array.from(document.getElementsByClassName('botoes'));
 
 const acoes = {
-  abrirMenu: () => 
-    document.body.style.ad
+  abrirMenu: () => {
+    console.log("Testando...")
+  const abaMenu = document.querySelector('.abrirMenu');
+  if (abaMenu) {
+    abaMenu.classList.toggle('active');
+  }
+}
   ,
   verCarrinho: () => console.log("Mostrando itens do carrinho..."),
   fazerLogin: () => console.log("Indo para tela de login..."),

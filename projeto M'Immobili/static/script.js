@@ -4,10 +4,15 @@ const botoes = Array.from(document.getElementsByClassName('botoes'));
 const acoes = {
   abrirMenu: () => {
     console.log("Testando...")
-  const abaMenu = document.querySelector('.abrirMenu');
-  if (abaMenu) {
-    abaMenu.classList.toggle('active');
+    const abaMenu = document.querySelector('.menuAberto');
+    if (abaMenu.style.left == '0%') {
+    abaMenu.style.left = '-50%';
+  } else {
+    abaMenu.style.left = '0%';
   }
+
+
+
 }
   ,
   verCarrinho: () => console.log("Mostrando itens do carrinho..."),

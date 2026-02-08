@@ -3,17 +3,30 @@ const botoes = Array.from(document.getElementsByClassName('botoes'));
 
 const acoes = {
   abrirMenu: () => {
-    console.log("Testando...")
     const abaMenu = document.querySelector('.menuAberto');
-    if (abaMenu.style.left == '0%') {
-    abaMenu.style.left = '-50%';
-  } else {
-    abaMenu.style.left = '0%';
+    abaMenu.style.left = (abaMenu.style.left == '0%') ? '-50%' : '0%';
+
+    window.addEventListener('scroll', () => {
+      if (abaMenu.style.left == '0%') {
+        abaMenu.style.left = '-50%';
+      }
+    });
+
+    document.querySelectorAll('.menuAberto').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.menuAberto').style.left = '-50%';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const abaMenu = document.querySelector('.menuAberto');
+      const btnAbrir = document.querySelector('.botoes');
+
+      if (!abaMenu.contains(e.target) && !btnAbrir.contains(e.target)) {
+        abaMenu.style.left = '-50%';
+      }
+    });
   }
-
-
-
-}
   ,
   verCarrinho: () => console.log("Mostrando itens do carrinho..."),
   fazerLogin: () => console.log("Indo para tela de login..."),
@@ -30,7 +43,18 @@ botoes.forEach(botao => {
   });
 });
 
+window.addEventListener('scroll', function() {
+  const elemento = document.querySelector('.barraNavegacao');
+  const distanciaX = 200; 
 
+  if (window.scrollY > distanciaX) {
+    elemento.style.transition = 'all 2s ease';
+    elemento.classList.add('scroll');
+  } else {
+    elemento.style.transition = 'all 2s ease';
+    elemento.classList.remove('scroll');
+  }
+});
 
 const todasAsVitrines = document.querySelectorAll('.slider-container');
 

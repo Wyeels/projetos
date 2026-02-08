@@ -59,6 +59,7 @@ header > section > article > nav {
 /* Classe de alteração */
 
 .scroll {
+    padding: 8px;
     background-image: linear-gradient(150deg, #B0B0B0 15%, #EEEEEE 30%); 
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
@@ -299,19 +300,19 @@ main > section > article > h2 > a:hover {
 }
 
 .item {
-    gap: 0px;
-    flex-shrink: 0; 
     width: 250px;   
     height: 350px;
+    gap: 0px;
+    flex-shrink: 0; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
     background-image: linear-gradient(45deg, var(--corItensPreto), var(--corItensClaro),  var(--corItensEscuro));
     border-radius: 8px;
     box-shadow: 2px 2px 2px #00000073;
+    margin-left: 1.8%;
 }
 
 .caixa {
@@ -321,11 +322,64 @@ main > section > article > h2 > a:hover {
     background-color: blue;
 }
 
+/* Inicio das configurações de Teste */
+
+.articles {
+    z-index: 3;
+}
+
+/* Camada que vai borrar o site inteiro */
+#camada-foco {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.2); /* Escurece levemente */
+  backdrop-filter: blur(10px);    /* Borra o fundo */
+  z-index: 3;                   /* Fica na frente do main */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#camada-foco.ativo {
+  opacity: 1;
+}
+
+.articles.ativos {
+    opacity: 0;
+}
+
+/* Quando o item ganha o foco após 3s */
+.em-destaque {
+  position: relative;
+  z-index: 4 !important; /* Fica acima da camada de desfoque */
+  transform: scale(1.1);    /* Dá um leve zoom */
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Fim das configurações de Teste */
+
+/* .caixa:hover {
+    transition: all .5s ease;
+    transform: scale(1.05);
+    filter: blur(8px);
+} */
+
 .texto {
     width: 50%;
     height: 20%;
     border-radius: 8px;
     background-color: gray;
+}
+
+main li > .botoes {
+    width: 50px;
+    background-color: var(--corPaginaClaro);
+    border-radius: 8px;
+    margin-left: 10%;
+    padding-right: 4px;
 }
 
 aside > .botoes {

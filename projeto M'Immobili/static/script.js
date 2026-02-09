@@ -64,7 +64,7 @@ todasAsVitrines.forEach((container) => {
   if (itens.length === 0) return;
 
   function moverVitrine() {
-    const larguraItem = itens[0].offsetWidth + 90; 
+    const larguraItem = itens[0].offsetWidth + 80; 
 
     track.style.transition = 'transform 0.8s ease-in-out';
     track.style.transform = `translateX(-${larguraItem}px)`;

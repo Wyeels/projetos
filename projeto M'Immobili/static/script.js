@@ -82,33 +82,5 @@ todasAsVitrines.forEach((container) => {
   container.addEventListener('mouseleave', () => intervalo = setInterval(moverVitrine, 3000));
 });
 
-/* Inicio das configurações de Teste */
-
-const camada = document.getElementById('camada-foco');
-const caixas = document.querySelectorAll('.item');
-const articles = document.querySelector('.articles');
-let timer;
-
-caixas.forEach(caixa => {
-  caixa.addEventListener('mouseenter', () => {
-    // Inicia a contagem de 3 segundos (3000ms)
-    timer = setTimeout(() => {
-      articles.classList.add('ativos');
-      camada.classList.add('ativo');
-      caixa.classList.add('em-destaque');
-    }, 3000); 
-  });
-
-  caixa.addEventListener('mouseleave', () => {
-    // Cancela o timer se o mouse sair antes dos 3s
-    clearTimeout(timer); 
-    
-    // Remove o efeito
-    articles.classList.remove('ativos');
-    camada.classList.remove('ativo');
-    caixa.classList.remove('em-destaque');
-  });
-});
-
-/* Fim das configurações de Teste */
+            
 

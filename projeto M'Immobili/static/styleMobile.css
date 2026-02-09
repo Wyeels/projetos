@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 header {
     height: 300px;
-    background: url("../static/imagem\ de\ fundo.png") center no-repeat scroll transparent;
+    background: url("../static/imagens/imagem\ de\ fundo.png") center no-repeat scroll transparent;
     background-size: cover;
     box-shadow: 0px 0px 8px #000000D4;
     border-radius: 0px 0px 8px 8px;
@@ -63,6 +63,8 @@ header > section > article > nav {
     background-image: linear-gradient(150deg, #B0B0B0 15%, #EEEEEE 30%); 
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 }
+
+/* Classe de alteração */
 
 header > section > article > nav > img {
     width: 40px;
@@ -106,7 +108,7 @@ header > section > article > div > article > p {
 }
 
 .menuAberto {
-    width: 35dvw;
+    max-width: 35dvw;
     height: 100dvh;
     display: grid;
     place-content: space-between;
@@ -126,6 +128,11 @@ header > section > article > div > article > p {
     grid-template-rows: repeat(6, auto);
     grid-template-columns: 1fr 4fr;
     place-items: center left;
+}
+
+#login, #carrinho {
+    justify-self: right;
+    align-self: right;
 }
 
 .navegacao > #menu {
@@ -410,6 +417,8 @@ footer > section {
     grid-row: 3 / 4;
     grid-column: 1 / 5;
     margin: auto;
+    box-shadow: 0px 0px 8px black;
+    border-radius: 8px 8px 0px 0px;
     background-color: transparent;
     width: 100%;
     margin-bottom: 10px;
@@ -430,6 +439,7 @@ footer > section {
 
 .terc img, .terc div {
     width: 150px;
+    filter: blur(.5px);
     display: block;
     margin: auto;
     background: transparent;

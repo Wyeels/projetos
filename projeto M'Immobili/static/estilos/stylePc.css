@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+header {
+    background-image: url("../imagens/imagemDeFundoPC.png"), linear-gradient(150deg, var(--corPaginaEscuro) 15%, var(--corPaginaClaro) 30%);
+    background-size: contain;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 80%; 
+}
+
+.item {
+    margin-left: 1.8%;
+}
+
+aside > .botoes {
+    top: 92%;
+    left: 92%;
+}

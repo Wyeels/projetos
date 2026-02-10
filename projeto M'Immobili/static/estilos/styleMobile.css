@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 header {
     height: 300px;
-    background: url("../static/imagens/imagem\ de\ fundo.png") center no-repeat scroll transparent;
+    background: url("../imagens/imagem\ de\ fundo.png") center no-repeat scroll transparent;
     background-size: cover;
     box-shadow: 0px 0px 8px #000000D4;
     border-radius: 0px 0px 8px 8px;
@@ -354,8 +354,8 @@ main li > .botoes {
 
 main li > .botoes:hover {
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.377);
-    content: url("../static/imagens/carrinho_clicado.png");
-    src: "../static/carrinho_clicado.png";
+    content: url("../imagens/carrinho_clicado.png");
+    src: "../imagens/carrinho_clicado.png";
 }
 
 aside > .botoes {

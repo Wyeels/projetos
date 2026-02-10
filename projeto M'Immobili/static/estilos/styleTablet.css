@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.slider-container {
+    overflow: hidden;
+    width: 100%; 
+}
+
+.item {
+    transform: translateX(0px);
+    margin-left: 1.8%;
+}
+
+aside > .botoes {
+    top: 92%;
+    left: 88%;
+}

@@ -1,4 +1,5 @@
 const botoes = Array.from(document.getElementsByClassName('botoes'));
+const chat = document.getElementsByClassName('suporteChat')[0];
 
 const acoes = {
   abrirMenu: () => {
@@ -25,11 +26,37 @@ const acoes = {
         abaMenu.style.left = '-50%';
       }
     });
-  }
-  ,
+  },
   verCarrinho: () => console.log("Mostrando itens do carrinho..."),
   fazerLogin: () => console.log("Indo para tela de login..."),
-  abrirSuporte: () => console.log("Iniciando suporte...")
+  abrirSuporte: () => {
+    chat.classList.add('aberto')
+    document.body.style.overflow = "hidden";
+  },
+  fechar: () => {
+    chat.classList.remove('aberto')
+    document.body.style.overflow = "visible";
+  },
+  autoatendimento: () => {
+    const caixaAuto = document.querySelector('aside > div > div:first-of-type');
+    const caixaTicket = document.querySelector('aside > div > div:last-of-type');
+    caixaTicket.style.display = 'none';
+    caixaAuto.style.gridRow = '2 / 5';
+    caixaAuto.style.gridColumn = '1 / 4';
+    caixaAuto.innerHTML = `
+                
+                `
+  },
+  ticket: () => {
+    const caixaTicket = document.querySelector('aside > div > div:last-of-type');
+    const caixaAuto = document.querySelector('aside > div > div:first-of-type');
+    caixaAuto.style.display = 'none';
+    caixaTicket.style.gridRow = '2 / 5';
+    caixaTicket.style.gridColumn = '1 / 4';
+    caixaTicket.innerHTML = `
+                
+                `
+  }
 };
 
 botoes.forEach(botao => {

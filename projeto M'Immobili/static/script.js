@@ -59,7 +59,7 @@ function renderizarItensCarrinho() {
         <div>
           <button onclick="confirmarCompra()">Confirmar Compra</button>
           <button onclick="limparCarrinho()">Limpar</button>
-          </div>
+        </div>
     `;
     document.getElementsByClassName('fechar-carrinho')[0].addEventListener('click', () => {
         abaCarrinho.classList.remove('ativo');

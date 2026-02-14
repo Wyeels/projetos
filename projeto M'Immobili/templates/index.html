@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../static/estilos/styleMobile.css" media="screen">
     <link rel="stylesheet" href="../static/estilos/styleTablet.css" media="(min-width: 600px)">
     <link rel="stylesheet" href="../static/estilos/stylePc.css" media="screen and (min-width: 900px)">
-    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -18,8 +18,14 @@
                     
                     <img src="../static/imagens/logo.png" alt="Logo">
                     
-                    <img src="../static/imagens/carrinho.png" alt="Carrinho" id="carrinho" class="botoes" data-acao="verCarrinho">
-                    
+                    <div>
+                        <img src="../static/imagens/carrinho.png" alt="Carrinho" id="carrinho" class="botoes" data-acao="verCarrinho">
+                        <div id="verCarrinho">
+                            
+                        </div>
+                        <span id="cont-carrinho">0</span>
+                    </div>
+
                     <img src="../static/imagens/login.png" alt="Login" id="login" class="botoes" data-acao="fazerLogin">
                 </nav>
                 
@@ -73,12 +79,11 @@
         </section>
     </header>
     <main>
-        <div id="camada-foco"></div>
         <section>
             <article>
                 <h2><a href="#">Armazenamento</a></h2>
                 <div class="slider-container">
-                    <ul class="slider-track">
+                    <ul class="slider-track" data-categoria="armazenamento">
                         <li class="item">
                             <div class="caixa">
                                 
@@ -113,7 +118,7 @@
             <article>
                 <h2><a href="#">Assento e Repouso</a></h2>
                 <div class="slider-container">
-                    <ul class="slider-track">
+                    <ul class="slider-track" data-categoria="assento">
                         <li class="item">
                             <div class="caixa">
 
@@ -148,7 +153,7 @@
             <article>
                 <h2><a href="#">Superfície</a></h2>
                 <div class="slider-container">
-                    <ul class="slider-track">
+                    <ul class="slider-track" data-categoria="superficie">
                         <li class="item">
                             <div class="caixa">
 
@@ -183,7 +188,7 @@
             <article>
                 <h2><a href="#">Estruturas e Suporte</a></h2>
                 <div class="slider-container">
-                    <ul class="slider-track">
+                    <ul class="slider-track" data-categoria="estrutura">
                         <li class="item">
                             <div class="caixa">
 
@@ -251,7 +256,7 @@
         </section>
     </footer>
 
-    <script src="../static/script.js">
+    <script type="module" src="../static/script.js">
 
     </script>
 </body>

@@ -260,3 +260,68 @@ window.adicionarAoCarrinho = function(id, nome, preco) {
     
     atualizarContadorVisual();
 };
+
+function calcularTotal() {
+    const itens = JSON.parse(localStorage.getItem('meuCarrinho')) || [];
+    return itens.reduce((soma, item) => {
+        const precoLimpo = item.preco.replace('R$', '').replace('.', '').replace(',', '.').trim();
+        return soma + parseFloat(precoLimpo);
+    }, 0);
+}
+
+window.confirmarCompra = async function() {
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+
+    if (!user || userError) {
+        alert("Você precisa estar logado!");
+        window.location.href = "login.html";
+        return;
+    }
+
+    const { data: perfil, error: perfilError } = await supabase
+        .from('perfis') 
+        .select('endereco, nome_completo')
+        .eq('id', user.id) 
+        .single(); 
+
+    if (perfilError || !perfil) {
+        window.location.href = "../templates/cadastroUser.html";
+        console.error("Erro ao buscar perfil:", perfilError);
+        alert("Erro ao recuperar seus dados de entrega.");
+        return;
+    }
+
+    const itensNoCarrinho = JSON.parse(localStorage.getItem('meuCarrinho')) || [];
+    if (itensNoCarrinho.length === 0) return alert("Seu carrinho está vazio!");
+
+    const valorTotal = calcularTotal();
+    const gerarPedido = () => {
+    const data = new Date().toISOString().replace(/\D/g, '').slice(2, 12); // AAmmDDHHMM
+    const aleatorio = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    };
+
+    const { data, error } = await supabase
+        .from('pedidos')
+        .insert([
+            { 
+                numero_pedido: `PED-${data}-${aleatorio}-${user.id}`,
+                status: 'pendente',
+                produto: JSON.stringify(itensNoCarrinho),
+                usuario: perfil.nome_completo,
+                endereco: perfil.endereco 
+            }
+        ]);
+
+    if (error) {
+        console.error("Erro ao salvar pedido:", error.message);
+        alert("Erro ao processar pedido. Tente novamente.");
+    } else {
+        alert("Pedido confirmado! Redirecionando para o pagamento seguro...");
+        
+        // Aqui você faria o redirecionamento para o Stripe/Mercado Pago
+        // window.location.href = "URL_DO_PAGAMENTO";
+        
+        localStorage.removeItem('meuCarrinho');
+        window.location.reload();
+    }
+};

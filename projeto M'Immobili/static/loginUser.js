@@ -21,6 +21,7 @@ window.cadastrarUsuario = async function(email, senha, nome, endereco, telefone)
             console.error("Erro ao salvar perfil:", profileError.message);
         } else {
             alert("Cadastro realizado! Verifique seu e-mail para confirmar.");
+            window.location.href = "../templates/index.html"; 
         }
     }
 }
@@ -34,6 +35,13 @@ window.iniciarSessao = async function(email, senha) {
     if (error) return alert("Erro ao logar: " + error.message);
     
     alert("Bem-vindo, " + data.user.email);
-    // Redirecione para a home após o login em vez de apenas recarregar
-    window.location.href = "../index.html"; 
+    window.location.href = "../templates/index.html"; 
 }
+
+document.getElementById('ir-cadastro')?.addEventListener('click', () => {
+  window.location.href = '../templates/cadastroUser.html';
+});
+
+document.getElementById('ir-login')?.addEventListener('click', () => {
+  window.location.href = '../templates/loginUser.html';
+});

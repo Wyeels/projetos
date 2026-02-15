@@ -425,11 +425,10 @@ main > section > article > h2 > a:hover {
     box-shadow: 2px 2px 2px #00000073;
 }
 
-.caixa {
+.caixa, .caixa img{
     width: 90%;
     height: 65%;
     border-radius: 8px;
-    background-color: blue;
 }
 
 .caixa:hover {
@@ -441,7 +440,8 @@ main > section > article > h2 > a:hover {
     width: 50%;
     height: 20%;
     border-radius: 8px;
-    background-color: gray;
+    padding: 5px;
+    font-size: .9em;
 }
 
 main li > .botoes {

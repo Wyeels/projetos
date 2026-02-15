@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../static/estilos/styleLogin.css">
 </head>
 <body>
-    
+    <main>
+        <div>
+            <input type="email" name="email" id="email" required placeholder="Email">
+            <input type="password" name="senha" id="senha" required placeholder="Senha">
+            <button onclick="cadastrarUsuario(email.value, senha.value)">Entrar</button>
+        </div>
+        <div>
+            <p id="ir-cadastro">Ir para cadastro</p>
+        </div>
+    </main>
+    <footer>
+        <section>
+                <div>
+                    <img src="../static/imagens/fundoFooter.png" alt="Fundo">
+                </div>
+                <p> &copy 2026 M'Immobbili rights reserved - create by Wesley Xavier</p>
+        </section>
+    </footer>
+
     <script type="module" src="../static/loginUser.js">
 
     </script>

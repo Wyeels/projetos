@@ -82,7 +82,27 @@ window.removerDoCarrinho = function(index) {
     atualizarContadorVisual();
 };
   },
-  fazerLogin: () => console.log("Indo para tela de login..."),
+  fazerLogin: async () => {
+    if (typeof supabase === 'undefined') {
+      console.error("Erro: O SDK do Supabase ainda não foi carregado.");
+      return;
+    }
+
+    try {
+      const { data: { user }, error } = await supabase.auth.getUser();
+
+      if (error || !user) {
+        console.log("Acesso negado: Redirecionando para Login.");
+        window.location.href = '../templates/loginUser.html';
+      } else {
+        console.log("Acesso permitido: Indo para Perfil.");
+        window.location.href = '../templates/perfil.html';
+      }
+    } catch (err) {
+      console.error("Erro na verificação de auth:", err);
+      window.location.href = '../templates/loginUser.html';
+    }
+  },
   abrirSuporte: () => {
     chat.classList.add('aberto')
     document.body.style.overflow = "hidden";
@@ -127,6 +147,9 @@ window.removerDoCarrinho = function(index) {
     caixaTicket.innerHTML = `
                 
                 `
+  },
+  verCompras: () => {
+    window.location.href = "../templates/admin.html";
   }
 };
 
@@ -207,7 +230,7 @@ async function carregarSecao(nomeCategoria) {
         return;
     }
 
-    console.log("Produtos encontrados para " + nomeCategoria + ":", produtos); // LOG 2
+    console.log("Produtos encontrados para " + nomeCategoria + ":", produtos); 
 
     const listaHTML = document.querySelector(`ul[data-categoria="${nomeCategoria}"]`);
     if (!listaHTML) {
@@ -216,15 +239,15 @@ async function carregarSecao(nomeCategoria) {
     }
 
     const itensNoHTML = listaHTML.querySelectorAll('.item');
-    console.log("Espaços (li) disponíveis no HTML:", itensNoHTML.length); // LOG 3
+    console.log("Espaços (li) disponíveis no HTML:", itensNoHTML.length); 
 
     produtos.forEach((produto, index) => {
         if (itensNoHTML[index]) {
             const li = itensNoHTML[index];
-            li.querySelector('.caixa').innerHTML = `<img src="${produto.imagem_url}" style="width:100%;">`;
+            li.querySelector('.caixa').innerHTML = `<img src="${produto.imagem}" style="width:100%;">`;
             li.querySelector('.texto').innerHTML = `<strong>${produto.nome}</strong><br>R$ ${produto.preco}`;
           
-        li.querySelector('.caixa').innerHTML = `<img src="${produto.imagem_url}" style="width:100%; height:100%; object-fit:cover;">`;
+        li.querySelector('.caixa').innerHTML = `<img src="${produto.imagem}" style="width:100%; height:100%; object-fit:cover;">`;
         li.querySelector('.texto').innerHTML = `<strong>${produto.nome}</strong><br>R$ ${produto.preco}`;
         
         const imgCarrinho = li.querySelector('li img.botoes'); 
@@ -296,7 +319,7 @@ window.confirmarCompra = async function() {
 
     const valorTotal = calcularTotal();
     const gerarPedido = () => {
-    const data = new Date().toISOString().replace(/\D/g, '').slice(2, 12); // AAmmDDHHMM
+    const data = new Date().toISOString().replace(/\D/g, '').slice(2, 12);
     const aleatorio = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
     };
 
@@ -304,7 +327,7 @@ window.confirmarCompra = async function() {
         .from('pedidos')
         .insert([
             { 
-                numero_pedido: `PED-${data}-${aleatorio}-${user.id}`,
+                numero_pedido: `PED-${gerarPedido()}`,
                 status: 'pendente',
                 produto: JSON.stringify(itensNoCarrinho),
                 usuario: perfil.nome_completo,

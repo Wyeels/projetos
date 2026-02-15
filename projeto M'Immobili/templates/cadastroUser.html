@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="../static/estilos/styleLogin.css">
 </head>
 <body>
     <main>
-        <input type="email" name="email" id="email">
-        <input type="password" name="senha" id="senha">
-        <input type="text" name="nome" id="nome">
-        <input type="text" name="endereco" id="endereco">
-        <button onclick="cadastrarUsuario(email.value, senha.value, nome.value, endereco.value)">Cadastrar</button>
+        <div>
+            <input type="email" name="email" id="email" required placeholder="Email">
+            <input type="password" name="senha" id="senha" required placeholder="Senha">
+            <input type="text" name="nome" id="nome" required minlength="10" maxlength="40" placeholder="Nome Completo">
+            <input type="text" name="endereco" id="endereco" required placeholder="Cidade, Bairro, Rua e Número da casa">
+            <button onclick="cadastrarUsuario(email.value, senha.value, nome.value, endereco.value)">Cadastrar</button>
+        </div>
+        <div>
+            <p id="ir-login">Ir para login</p>
+        </div>
     </main>
+    <footer>
+        <section>
+                <div>
+                    <img src="../static/imagens/fundoFooter.png" alt="Fundo">
+                </div>
+                <p> &copy 2026 M'Immobbili rights reserved - create by Wesley Xavier</p>
+        </section>
+    </footer>
+    
     <script type="module" src="../static/loginUser.js">
         
     </script>

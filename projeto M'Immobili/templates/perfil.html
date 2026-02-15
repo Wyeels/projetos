@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administração</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="../static/estilos/styleLogin.css">
 </head>
-
 <body>
-    <header>
-
-    </header>
     <main>
-        <div>
-            <form id="loginForm">
-                <input type="email" name="email" id="email" required>
-                <input type="password" name="password" id="password" required>
-                <input type="submit" value="Entrar">
-            </form>
+        <div id="perfil-container">
+            <h1>Meu Perfil</h1>
+            <p><strong>Nome:</strong> <span id="user-name">Carregando...</span></p>
+            <p><strong>Email:</strong> <span id="user-email">Carregando...</span></p>
+            <p><strong>Endereço:</strong> <span id="user-adress">Carregando...</span></p>
+            <button onclick="deslogar()">Sair da Conta</button>
         </div>
     </main>
     <footer>
         <section>
-            <article class="terc">
                 <div>
                     <img src="../static/imagens/fundoFooter.png" alt="Fundo">
                 </div>
                 <p> &copy 2026 M'Immobbili rights reserved - create by Wesley Xavier</p>
-            </article>
         </section>
     </footer>
-
-    <script type="module" src="../static/loginAdm.js">
+    <script type="module" src="../static/user.js">
 
     </script>
 </body>
-
 </html>

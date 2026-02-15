@@ -41,6 +41,7 @@ main {
     display: grid;
     place-content: center;
     place-items: center;
+   
 }
 
 main > div {
@@ -49,6 +50,24 @@ main > div {
     place-content: center;
     place-items: center;
     gap: 10px;
+}
+
+main > #fecharPerfil {
+    position: relative;
+    top: -55px;
+    left: 5px;
+    display: grid;
+    place-content: start;
+}
+
+main > #fecharPerfil img {
+    width: 70px;
+    cursor: pointer;
+}
+
+main > #fecharPerfil img:hover {
+    transform: scale(1.05);
+    transition: all .5s ease;
 }
 
 main > div input {

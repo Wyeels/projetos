@@ -3,15 +3,30 @@ const supabase = createClient('https://wrfldeioljmzblooyvpd.supabase.co', 'sb_pu
 
 async function checarAcesso() {
     const { data: { user }, error } = await supabase.auth.getUser();
+    
     if (error || !user) {
-        window.location.href = "loginAdm.html";
-    } else {
-        carregarPedidos();
+        window.location.href = "../templates/loginAdm.html";
+        return;
     }
+
+    const { data: perfil } = await supabase
+        .from('perfis')
+        .select('role') 
+        .eq('id', user.id)
+        .single();
+
+    const isAdmin = perfil?.role === 'admin';
+    carregarPedidos(isAdmin, user.id);
 }
 
-async function carregarPedidos() {
-    const { data: pedidos, error } = await supabase.from('pedidos').select('*');
+async function carregarPedidos(isAdmin, userId) {
+    let query = supabase.from('pedidos').select('*');
+
+    if (!isAdmin) {
+        query = query.eq('user_id', userId); 
+    }
+
+    const { data: pedidos, error } = await query;
     const tabela = document.querySelector('[data-list="pedidos"]');
     
     if (error) return console.error(error);
@@ -20,13 +35,17 @@ async function carregarPedidos() {
         <tr>
             <td>${p.numero_pedido}</td>
             <td>${p.produto}</td>
-            <td>${p.status}</td>
+            <td><strong>${p.status}</strong></td>
             <td>
-                <select onchange="atualizarStatus(${p.id}, this.value)">
-                    <option value="Recebido" ${p.status === 'Recebido' ? 'selected' : ''}>Recebido</option>
-                    <option value="Em fabricação" ${p.status === 'Em fabricação' ? 'selected' : ''}>Em fabricação</option>
-                    <option value="Pronto" ${p.status === 'Pronto' ? 'selected' : ''}>Pronto</option>
-                </select>
+                ${isAdmin ? `
+                    <select onchange="atualizarStatus(${p.id}, this.value)">
+                        <option value="Recebido" ${p.status === 'Recebido' ? 'selected' : ''}>Recebido</option>
+                        <option value="Em fabricação" ${p.status === 'Em fabricação' ? 'selected' : ''}>Em fabricação</option>
+                        <option value="Pronto" ${p.status === 'Pronto' ? 'selected' : ''}>Pronto</option>
+                    </select>
+                ` : `
+                    <span>Apenas Leitura</span>
+                `}
             </td>
         </tr>
     `).join('');

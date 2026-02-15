@@ -20,11 +20,13 @@ async function carregarPerfil() {
   if (error) {
     console.error("Erro ao buscar perfil:", error.message);
   } else {
-    document.getElementById('user-name').textContent = data.nome || "Não informado";
+    document.getElementById('user-name').textContent = data.nome_completo || "Não informado";
     document.getElementById('user-email').textContent = user.email
-    document.getElementById('user-adress'.textContent = user.adress); 
+    document.getElementById('user-adress').textContent = data.endereco; 
   }
 }
+
+document.getElementById('deslogar').addEventListener('click', deslogar);
 
 async function deslogar() {
   const { error } = await supabase.auth.signOut();
@@ -35,3 +37,11 @@ async function deslogar() {
     window.location.href = '../templates/index.html'; 
   }
 }
+
+document.getElementById('ir-cadastro')?.addEventListener('click', () => {
+  window.location.href = '../templates/cadastroUser.html';
+});
+
+document.getElementById('fecharPerfil')?.addEventListener('click', () => {
+    window.location.href = "../templates/index.html";
+});
